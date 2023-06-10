@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import Chat from '@/components/Chat';
 import Signal from '@/components/Signal';
 import useSWR from "swr";
+import {getBottomSignal} from "@/lib/api/signal";
 const Container = styled.div`
   width:100%;
   height:100%;
@@ -106,7 +107,7 @@ const Widget = styled.div`
 function Home() {
   const {themeMode, curPair} = useStore();
   const [isInited, setIsInited] = useState<boolean>(false);
-  const {data} = useSWR("/get/buttom-signal", {refreshInterval:1000})
+  const {data} = useSWR("/get/buttom-signal",getBottomSignal, {refreshInterval:1000})
   useEffect(()=>{
     setIsInited(true); // 트레이딩뷰가 처음에 보이지 않아 추가함
   }, [])
