@@ -1,0 +1,11 @@
+.next
+.idea
+node_modules
+
+.DS_Store
+out/
+.env
+
+
+
+archive
