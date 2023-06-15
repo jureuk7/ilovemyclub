@@ -15,6 +15,7 @@ const Padding = styled.div`
     width:100%;
     height:50px;
 `
+
 const Container = styled.div`
     left:0;
     width:100%;

@@ -171,7 +171,7 @@ export default function Signal({
                                }) {
     const {curPair, setCurPair} = useStore();
 
-    const [mode, setMode] = useState<0|1|2>(0);
+    const [mode, setMode] = useState<0|1|2|3>(0);
 
     const { data, error } = useSWR<Signal[]>("/webhook/get/signal",getSignal,);
     const [finalData, setFinalData] = useState<Signal[]>([]);
@@ -241,13 +241,16 @@ export default function Signal({
                 <Dropdown options={options} onChange={onSelect} value={curPair}/>
                 <SelectBar>
                     <SelectBox onClick={()=>setMode(0)} selected={mode === 0}>
-                        3M
+                        5M
                     </SelectBox>
                     <SelectBox onClick={()=>setMode(1)} selected={mode === 1}>
-                        10M
+                        15M
                     </SelectBox>
                     <SelectBox onClick={()=>setMode(2)} selected={mode === 2}>
                         30M
+                    </SelectBox>
+                    <SelectBox onClick={()=>setMode(3)} selected={mode === 2}>
+                        1H
                     </SelectBox>
                 </SelectBar>
             </OptionBlock>

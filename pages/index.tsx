@@ -125,25 +125,10 @@ function Home() {
               </>}
             </Widget>
             <RateContainer>
+
               <RateBox>
                 <div>
-                  공포 / 탐욕 지수 : {data && JSON.parse(data[0].sjon).fear}
-                </div>
-                <Progressbar tcolor={1} size={data && 100 - Math.floor(JSON.parse(data[0].sjon).fear)}>
-                  <div/>
-                </Progressbar>
-              </RateBox>
-              <RateBox>
-                <div>
-                  강도 지수 (RSI) : {data && JSON.parse(data[0].sjon).rsi}
-                </div>
-                <Progressbar tcolor={0} size={data && 100 - Math.floor(JSON.parse(data[0].sjon).rsi)}>
-                  <div/>
-                </Progressbar>
-              </RateBox>
-              <RateBox>
-                <div>
-                    스토캐스틱 : {data && JSON.parse(data[0].sjon).stoch}
+                    BTC 김프 : {data && JSON.parse(data[0].sjon).stoch}
                 </div>
                 <Progressbar tcolor={0} size={data && 100 - Math.floor(JSON.parse(data[0].sjon).stoch)} >
                   <div/>
@@ -151,11 +136,49 @@ function Home() {
               </RateBox>
               <RateBox>
                 <div>
-                  트랜드 : {data && JSON.parse(data[0].sjon).rsi}
+                  ETH 김프 : {data && JSON.parse(data[0].sjon).rsi}
                 </div>
                 <Progressbar size={
                   30
                 } tcolor={2}>
+                  <div/>
+                </Progressbar>
+              </RateBox>
+              <RateBox>
+                <div>
+                  XRP 김프 : {data && JSON.parse(data[0].sjon).rsi}
+                </div>
+                <Progressbar size={
+                  30
+                } tcolor={2}>
+                  <div/>
+                </Progressbar>
+              </RateBox>
+              <RateBox>
+                <div>
+                  AVAX : {data && JSON.parse(data[0].sjon).rsi}
+                </div>
+                <Progressbar size={
+                  30
+                } tcolor={2}>
+                  <div/>
+                </Progressbar>
+              </RateBox>
+            </RateContainer>
+            <RateContainer>
+              <RateBox>
+                <div>
+                  LONG 비율 : {data && JSON.parse(data[0].sjon).longRatio}
+                </div>
+                <Progressbar tcolor={1} size={data && 100 - Math.floor(JSON.parse(data[0].sjon).fear)}>
+                  <div/>
+                </Progressbar>
+              </RateBox>
+              <RateBox>
+                <div>
+                  SHORT 비율 (RSI) : {data && JSON.parse(data[0].sjon).rsi}
+                </div>
+                <Progressbar tcolor={0} size={data && 100 - Math.floor(JSON.parse(data[0].sjon).rsi)}>
                   <div/>
                 </Progressbar>
               </RateBox>

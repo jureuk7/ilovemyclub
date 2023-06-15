@@ -37,7 +37,6 @@ const Container = styled.div<{isChanging:boolean}>`
     align-items: center;
     gap:10px;
     animation: ${p=>p.isChanging ? css`${GoLeft} 0.4s ease forwards` : css`${GoRight} 0.4s ease forwards`};
-
     width:450px;
 `
 const UserContainer = styled.div<{inited:boolean}>`
@@ -59,7 +58,7 @@ const UserContainer = styled.div<{inited:boolean}>`
     }
 `
 const UserProperty = styled.div`
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;

@@ -3,14 +3,12 @@ import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import styled from "styled-components"
 
-
 const Adjust = styled.div`
     width:100%;
     height:100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
 `
 const Container = styled.div`
     width:300px;
@@ -82,7 +80,6 @@ export default function Complete({orderId, secretKey}) {
             }
         )
     }
-
 
     return (
         <>
